@@ -321,6 +321,20 @@
       border:1px solid rgba(233,237,246,.10);
       background: rgba(17,23,35,.35);
     }
+    .hero-image-wrap {
+      width: 100%;
+      height: 100%;
+      min-height: 420px; /* controls hero height */
+      overflow: hidden;
+      border-left: 1px solid rgba(212,175,55,.18);  
+  }
+    .hero-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;      /* 🔥 THIS IS THE KEY */
+      object-position: center;
+      display: block;
+  }
   </style>
 </head>
 
@@ -371,10 +385,12 @@
       </div>
 
       <!-- IMAGE PLACEHOLDER 1 -->
-     <img 
+<div class="hero-image-wrap">
+      <img 
         src="images/grc-hero-01.png.png"
         alt="Gadget Rum Club cyber pirate hero image"
         style="width:100%; height:auto; display:block; border-radius:18px;>
+      </div>
     </section>
 
     <div class="grid">
