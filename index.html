@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Gadget Rum Club — Social Media Management</title>
   <meta name="description" content="Gadget Rum Club social media management: you run the business, we run the socials. Consistent, sharp content with controlled pirate chaos." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">  
 
   <style>
     :root{
@@ -69,12 +66,6 @@
     .mark span{font-size:18px}
     .navcta{
       display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
-    }
-    .mark img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
     }
 
     .btn{
@@ -330,15 +321,87 @@
       border:1px solid rgba(233,237,246,.10);
       background: rgba(17,23,35,.35);
     }
-  h1 {
-    font-family: "Pirata One", system-ui, sans-serif;
-    letter-spacing: 0.06em;
-  }
+.package-image {
+  width: 100%;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;          /* ← THIS controls visible size */
+  margin-top: 12px;
+}
 
-  h2, h3, .kicker {
-    font-family: "Pirata One", system-ui, sans-serif;
-    letter-spacing: 0.04em;
-  }    
+.package-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.package-image {
+  height: 220px;          /* ← THIS controls visible size */
+  margin-top: 12px;
+}
+
+.package-image img {
+  max-width: 85%;         /* ← scales image DOWN visually */
+  max-height: 85%;
+}
+
+/* =========================================================
+   IMAGE SYSTEM — SINGLE SOURCE OF TRUTH
+   ========================================================= */
+
+/* Base image reset */
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------------------------------------------------------
+   STANDARD SECTION IMAGE CONTAINERS
+   (Who / How / Services / Packages / CTA)
+   --------------------------------------------------------- */
+
+.placeholder,
+.package-image {
+  height: 420px;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Images inside standard containers */
+.placeholder img,
+.package-image img {
+  object-fit: cover;
+}
+
+/* ---------------------------------------------------------
+   HERO IMAGE — intentionally cinematic
+   --------------------------------------------------------- */
+
+.hero .placeholder {
+  height: 100%;
+  min-height: 100%;
+}
+
+.hero .placeholder img {
+  object-fit: cover;
+}
+
+/* ---------------------------------------------------------
+   CONTACT / FINAL CTA IMAGES
+   --------------------------------------------------------- */
+
+#contact .placeholder {
+  height: 280px;
+  min-height: 280px;
+}
+
+#contact .placeholder img {
+  object-fit: cover;
+}
   </style>
 </head>
 
@@ -346,7 +409,7 @@
   <div class="wrap">
     <header class="topbar">
       <div class="brand">
-        <div class="mark" aria-hidden="true"><img src = images/grc-smalllogo-01.png></div>
+        <div class="mark" aria-hidden="true"><span>☠</span></div>
         <div>
           <div style="font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.14em;text-transform:uppercase;">
             Gadget Rum Club
@@ -390,11 +453,12 @@
 
       <!-- IMAGE PLACEHOLDER 1 -->
       <div class="placeholder">
-       <img
-          src="images/grc-hero-01.png.png"
+		<img
+          src="images/grc-hero-01.png"
           alt=""
           style="width:100%;height:100%;object-fit:cover;display:block;"
-      >
+		>
+        </div>
       </div>
     </section>
 
@@ -408,12 +472,12 @@
 
         <!-- IMAGE PLACEHOLDER 2 -->
         <div class="placeholder" style="min-height:220px;border-radius:16px;margin-bottom:14px;">
-        <img
-          src="images/grc-whatwedo-01.png.png"
-          alt=""
+		<img
+          src="images/grc-whatwedo-01.png"
+		  alt=""
           style="width:100%;height:100%;object-fit:cover;display:block;"
-        >
-          </div>
+		  >
+        
         </div>
 
         <ul class="list">
@@ -439,11 +503,13 @@
 
         <!-- IMAGE PLACEHOLDER 3 -->
         <div class="placeholder" style="min-height:220px;border-radius:16px;margin-bottom:14px;">
-          <div class="placeholder-inner">
-            <div class="ph-num">3</div>
-            <p class="ph-title">Pirate flag / logo moment</p>
-            <p class="ph-desc">A clean brand stamp. Flag + gold accents + dark grit.</p>
-          </div>
+          
+		  	<img
+				src="images/grc-flag-01.png"
+				alt=""
+				style="width:100%;height:100%;object-fit:cover;display:block;"
+			>          
+          
         </div>
 
         <ul class="list">
@@ -478,11 +544,11 @@
 
         <!-- IMAGE PLACEHOLDER 4 -->
         <div class="placeholder" style="min-height:220px;border-radius:16px;margin-bottom:14px;">
-          <div class="placeholder-inner">
-            <div class="ph-num">4</div>
-            <p class="ph-title">Mixed crew / “we work with you” image</p>
-            <p class="ph-desc">Different business types as a pirate crew. Fun but clear.</p>
-          </div>
+          <img
+			src="images/grc-crew-01.png"
+			alt=""
+			style="width:100%;height:100%;object-fit:cover;display:block;"
+		>          
         </div>
 
         <ul class="list">
@@ -495,36 +561,37 @@
 
       <!-- HOW IT WORKS -->
       <section class="card section" id="how">
-        <div class="h2">
+        
+		<div class="h2">
           <h2>How It Works</h2>
           <div class="tag">Simple. Fast. <b>Repeatable.</b></div>
         </div>
 
         <!-- IMAGE PLACEHOLDER 5 -->
         <div class="placeholder" style="min-height:220px;border-radius:16px;margin-bottom:14px;">
-          <div class="placeholder-inner">
-            <div class="ph-num">5</div>
-            <p class="ph-title">Map / treasure / workflow image</p>
-            <p class="ph-desc">A “here’s the process” visual. Map lines, icons, steps.</p>
-          </div>
+			<img
+				src="images/grc-map-01.png"
+				style="width:100%;height:100%;object-fit:cover;display:block;"
+			> 
+          
         </div>
 
         <ol class="steps">
           <li class="step">
             <div class="num">1</div>
-            <div><b>Quick intro</b><div class="muted">15–20 minutes. We learn your vibe + goals.</div></div>
+            <div><b>Chart A Course</b><div class="muted">15–20 minutes. We learn your vibe + goals.</div></div>
           </li>
           <li class="step">
             <div class="num">2</div>
-            <div><b>We build the plan</b><div class="muted">Content direction, cadence, and style.</div></div>
+            <div><b>Craft A Strategy</b><div class="muted">Content direction, cadence, and style.</div></div>
           </li>
           <li class="step">
             <div class="num">3</div>
-            <div><b>We ship posts</b><div class="muted">You approve. We schedule. Consistency begins.</div></div>
+            <div><b>Execute Posts</b><div class="muted">You approve. We schedule. Consistency begins.</div></div>
           </li>
           <li class="step">
             <div class="num">4</div>
-            <div><b>We improve</b><div class="muted">We adjust based on what hits.</div></div>
+            <div><b>Optimize and Grow</b><div class="muted">We adjust based on what hits.</div></div>
           </li>
         </ol>
 
@@ -544,10 +611,16 @@
 
       <div class="grid" style="grid-template-columns:1fr 1fr 1fr;">
         <div class="card section" style="padding:16px; background: rgba(17,23,35,.45);">
-          <div class="kicker" style="margin-bottom:10px;">Starter</div>
+          <div class="kicker" style="margin-bottom:10px;">Starter</div>		  
           <div style="font-weight:900;font-size:18px;margin-bottom:6px;">Keep it alive</div>
           <div class="muted">Perfect if you’ve been ghosting your own feed.</div>
           <div class="mini">Posting • basic visuals • consistency</div>
+		  <div class="package-image">
+		  <img
+			src="images/grc-starter-01.png"
+			alt=""			
+		> 
+		</div>
         </div>
 
         <div class="card section" style="padding:16px; background: rgba(17,23,35,.45); border-color: rgba(212,175,55,.25);">
@@ -555,6 +628,13 @@
           <div style="font-weight:900;font-size:18px;margin-bottom:6px;">Build the brand</div>
           <div class="muted">Solid cadence + better creative direction.</div>
           <div class="mini">Strategy • content • scheduling • engagement</div>
+		  <div class="package-image">
+
+		  <img
+			src="images/grc-standard-01.png"
+			alt=""
+						> 
+			</div>
         </div>
 
         <div class="card section" style="padding:16px; background: rgba(17,23,35,.45); border-color: rgba(155,17,30,.25);">
@@ -562,17 +642,14 @@
           <div style="font-weight:900;font-size:18px;margin-bottom:6px;">Full send</div>
           <div class="muted">Aggressive growth + tight brand control.</div>
           <div class="mini">Everything above • higher volume • campaigns</div>
+		  <div class="package-image">
+		  <img
+			src="images/grc-captain-01.png"
+			alt=""
+			> 
+		</div>
         </div>
-      </div>
-
-      <!-- IMAGE PLACEHOLDER 6 -->
-      <div class="placeholder" style="min-height:220px;border-radius:16px;margin-top:14px;">
-        <div class="placeholder-inner">
-          <div class="ph-num">6</div>
-          <p class="ph-title">Packages / tiers image</p>
-          <p class="ph-desc">Three crates / three ranks / treasure tiers.</p>
-        </div>
-      </div>
+      </div>     
     </section>
 
     <!-- CONTACT / CTA -->
@@ -593,6 +670,12 @@
             <div>
               <h3 style="margin:0 0 4px;">Book a call or send a message.</h3>
               <div class="mini">Swap these links for your real contact points.</div>
+			  <div class="placeholder" style="min-height:220px;border-radius:16px;margin-bottom:14px;">
+			  <img
+					src="images/grc-success-01.png"
+					
+				>
+			</div>
             </div>
             <div style="display:flex;gap:10px;flex-wrap:wrap;">
               <a class="btn btn-primary" href="https://calendly.com/" target="_blank" rel="noreferrer"><strong>Book a Call</strong></a>
@@ -603,12 +686,11 @@
         </div>
 
         <!-- IMAGE PLACEHOLDER 7 -->
-        <div class="placeholder" style="min-height:240px;border-radius:16px;">
-          <div class="placeholder-inner">
-            <div class="ph-num">7</div>
-            <p class="ph-title">Final CTA image</p>
-            <p class="ph-desc">Pirate captain pointing at a “Book Now” sign / neon call-to-action.</p>
-          </div>
+        <div class="placeholder" style="min-height:240px;border-radius:16px;">          
+		  <img
+					src="images/grc-book-01.png"
+					
+				>
         </div>
       </div>
 
