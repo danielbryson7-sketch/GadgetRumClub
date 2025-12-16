@@ -1,656 +1,275 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Gadget Rum Club — Social Media Management</title>
-  <meta name="description" content="Gadget Rum Club social media management: you run the business, we run the socials. Consistent, sharp content with controlled pirate chaos." />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gadget Rum Club — Social Media Management</title>
 
-  <style>
-    :root{
-      --navy:#002147;
-      --gold:#d4af37;
-      --red:#9b111e;
-      --char:#2f2f2f;
-      --rum:#6c4f3d;
+<style>
+:root {
+  --navy:#002147;
+  --gold:#d4af37;
+  --red:#9b111e;
+  --char:#2f2f2f;
+  --rum:#6c4f3d;
 
-      --bg:#0c0f14;
-      --panel:#111723;
-      --text:#e9edf6;
-      --muted:#a8b1c4;
-      --border:rgba(212,175,55,.22);
-      --shadow: 0 18px 55px rgba(0,0,0,.45);
-      --radius:18px;
-      --max:1080px;
-    }
+  --bg:#0c0f14;
+  --panel:#111723;
+  --text:#e9edf6;
+  --muted:#a8b1c4;
+  --border:rgba(212,175,55,.22);
+  --radius:18px;
+  --shadow:0 18px 55px rgba(0,0,0,.45);
+  --max:1100px;
+}
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:
-        radial-gradient(1200px 800px at 10% 0%, rgba(0,33,71,.45), transparent 55%),
-        radial-gradient(900px 700px at 90% 10%, rgba(155,17,30,.35), transparent 55%),
-        radial-gradient(900px 700px at 60% 110%, rgba(108,79,61,.35), transparent 55%),
-        linear-gradient(180deg, #070a0f 0%, var(--bg) 70%, #070a0f 100%);
-      line-height:1.35;
-    }
+* { box-sizing:border-box }
+body {
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: linear-gradient(180deg,#070a0f,#0c0f14);
+  color:var(--text);
+}
 
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:10px 0 22px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      letter-spacing:.08em; text-transform:uppercase; font-weight:800;
-    }
-    .mark{
-      width:42px; height:42px; border-radius:12px;
-      background: linear-gradient(135deg, var(--navy), #0b3d74);
-      border:1px solid rgba(212,175,55,.25);
-      display:grid; place-items:center;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-      position:relative;
-      overflow:hidden;
-    }
-    .mark:after{
-      content:"";
-      position:absolute; inset:-1px;
-      background: radial-gradient(circle at 30% 30%, rgba(212,175,55,.30), transparent 55%);
-      pointer-events:none;
-    }
-    .mark span{font-size:18px}
-    .navcta{
-      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
-    }
+img { display:block; width:100% }
 
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 14px; border-radius:14px;
-      font-weight:700; letter-spacing:.02em;
-      border:1px solid rgba(233,237,246,.14);
-      background: rgba(17,23,35,.55);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 10px 28px rgba(0,0,0,.25);
-      transition: transform .12s ease, border-color .12s ease, background .12s ease;
-      white-space:nowrap;
-    }
-    .btn:hover{transform: translateY(-1px); border-color: rgba(212,175,55,.35)}
-    .btn-primary{
-      border-color: rgba(212,175,55,.55);
-      background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(155,17,30,.10));
-    }
-    .btn-primary strong{color:var(--gold)}
-    .btn-danger{
-      border-color: rgba(155,17,30,.55);
-      background: linear-gradient(135deg, rgba(155,17,30,.18), rgba(108,79,61,.10));
-    }
+.wrap {
+  max-width:var(--max);
+  margin:0 auto;
+  padding:24px;
+}
 
-    .hero{
-      display:grid; grid-template-columns: 1.05fr .95fr;
-      gap:18px; align-items:stretch;
-    }
-    @media (max-width: 920px){
-      .hero{grid-template-columns:1fr}
-    }
+/* ---------------- HEADER ---------------- */
 
-    .card{
-      background: rgba(17,23,35,.60);
-      border:1px solid rgba(233,237,246,.10);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
-    }
-    .card:before{
-      content:"";
-      position:absolute; inset:0;
-      border-radius: var(--radius);
-      pointer-events:none;
-      background:
-        radial-gradient(900px 500px at 0% 0%, rgba(212,175,55,.10), transparent 55%),
-        radial-gradient(900px 500px at 110% 30%, rgba(155,17,30,.10), transparent 55%);
-      mix-blend-mode: screen;
-      opacity:.9;
-    }
-    .card > *{position:relative}
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:24px;
+}
 
-    .hero-copy{padding:28px}
-    .kicker{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 10px; border-radius:999px;
-      border:1px solid rgba(212,175,55,.25);
-      background: rgba(0,33,71,.25);
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.10em;
-      font-size:12px;
-      color: var(--gold);
-    }
-    h1{
-      margin:14px 0 10px;
-      font-size: clamp(28px, 4.4vw, 54px);
-      line-height:1.05;
-      letter-spacing:-.02em;
-    }
-    .sub{
-      margin:0 0 18px;
-      font-size: clamp(15px, 1.6vw, 18px);
-      color: var(--muted);
-      max-width: 54ch;
-    }
-    .bullets{
-      margin:18px 0 0;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:10px;
-    }
-    @media (max-width: 520px){
-      .bullets{grid-template-columns:1fr}
-    }
-    .pill{
-      padding:10px 12px;
-      border-radius: 14px;
-      background: rgba(47,47,47,.25);
-      border:1px solid rgba(233,237,246,.10);
-      font-weight:650;
-      color:#dbe3f6;
-    }
-    .pill b{color:var(--gold)}
-    .hero-ctas{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+nav a {
+  margin-left:12px;
+  padding:10px 14px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(17,23,35,.6);
+  text-decoration:none;
+  color:var(--text);
+  font-weight:600;
+}
 
-    .placeholder{
-      display:grid; place-items:center;
-      min-height: 280px;
-      padding:18px;
-      background:
-        linear-gradient(135deg, rgba(0,33,71,.35), rgba(47,47,47,.20)),
-        repeating-linear-gradient(45deg, rgba(212,175,55,.18) 0 10px, rgba(212,175,55,0) 10px 20px);
-      border-left: 1px solid rgba(212,175,55,.18);
-    }
-    .placeholder-inner{
-      width:100%;
-      max-width: 420px;
-      border-radius: 18px;
-      border:1px dashed rgba(212,175,55,.55);
-      padding:18px;
-      background: rgba(7,10,15,.55);
-      text-align:center;
-    }
-    .ph-num{
-      display:inline-flex; align-items:center; justify-content:center;
-      width:40px; height:40px;
-      border-radius: 999px;
-      border:1px solid rgba(212,175,55,.55);
-      color: var(--gold);
-      font-weight:900;
-      margin-bottom:10px;
-    }
-    .ph-title{
-      margin:0 0 6px;
-      font-weight:900;
-      letter-spacing:.06em;
-      text-transform:uppercase;
-      font-size:13px;
-      color:#f1f5ff;
-    }
-    .ph-desc{margin:0; color: var(--muted); font-size:14px}
+nav a.primary {
+  border-color:var(--gold);
+  color:var(--gold);
+}
 
-    .grid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:18px;
-    }
-    @media (max-width: 920px){
-      .grid{grid-template-columns:1fr}
-    }
+/* ---------------- HERO ---------------- */
 
-    .section{padding:22px}
-    .h2{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
-      margin-bottom:14px;
-    }
-    .h2 h2{
-      margin:0;
-      font-size: 22px;
-      letter-spacing:-.01em;
-    }
-    .tag{
-      font-size:12px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid rgba(233,237,246,.12);
-      background: rgba(47,47,47,.20);
-      color: var(--muted);
-      white-space:nowrap;
-    }
-    .tag b{color: var(--gold)}
-    .list{
-      margin:0; padding:0; list-style:none;
-      display:grid; gap:10px;
-    }
-    .list li{
-      padding:12px 12px;
-      border-radius: 14px;
-      border:1px solid rgba(233,237,246,.10);
-      background: rgba(17,23,35,.45);
-      display:flex; gap:10px;
-      align-items:flex-start;
-    }
-    .dot{
-      width:10px; height:10px; margin-top:6px;
-      border-radius:999px;
-      background: var(--gold);
-      box-shadow: 0 0 0 6px rgba(212,175,55,.12);
-      flex:0 0 auto;
-    }
-    .muted{color:var(--muted)}
-    .callout{
-      margin-top:14px;
-      padding:14px 14px;
-      border-radius: 16px;
-      border:1px solid rgba(155,17,30,.30);
-      background: linear-gradient(135deg, rgba(155,17,30,.12), rgba(0,33,71,.10));
-    }
-    .callout strong{color: #ffd9dd}
-    .mini{
-      font-size: 13px; color: var(--muted);
-      margin-top:8px;
-    }
+.hero {
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:18px;
+  background:rgba(17,23,35,.6);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
 
-    .steps{
-      display:grid; gap:10px;
-      margin:0; padding:0; list-style:none;
-    }
-    .step{
-      border-radius: 16px;
-      border:1px solid rgba(233,237,246,.10);
-      background: rgba(17,23,35,.45);
-      padding:14px;
-      display:flex; gap:12px; align-items:flex-start;
-    }
-    .num{
-      width:34px; height:34px;
-      border-radius: 12px;
-      background: rgba(0,33,71,.35);
-      border:1px solid rgba(212,175,55,.25);
-      display:grid; place-items:center;
-      font-weight:900;
-      color: var(--gold);
-      flex: 0 0 auto;
-    }
-    .step b{color: var(--gold)}
-    .cta-band{
-      margin-top:18px;
-      padding:18px;
-      border-radius: var(--radius);
-      border:1px solid rgba(212,175,55,.22);
-      background: linear-gradient(135deg, rgba(0,33,71,.30), rgba(108,79,61,.20));
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
-      flex-wrap:wrap;
-    }
-    .cta-band h3{
-      margin:0;
-      font-size: 20px;
-      letter-spacing:-.01em;
-    }
+.hero-copy {
+  padding:28px;
+}
 
-    footer{
-      margin-top:20px;
-      padding:18px 0 26px;
-      color: var(--muted);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      border-top: 1px solid rgba(233,237,246,.08);
-    }
-    .fine{
-      font-size: 12px;
-    }
-    .footer-links{display:flex; gap:10px; flex-wrap:wrap}
-    .footer-links a{
-      padding:8px 10px;
-      border-radius: 12px;
-      border:1px solid rgba(233,237,246,.10);
-      background: rgba(17,23,35,.35);
-    }
-    .hero-image-wrap {
-      width: 100%;
-      height: 100%;
-      min-height: 420px; /* controls hero height */
-      overflow: hidden;
-      border-left: 1px solid rgba(212,175,55,.18);  
+.hero-copy h1 {
+  font-size:clamp(32px,4vw,52px);
+  line-height:1.05;
+  margin:12px 0;
+}
+
+.hero-copy p {
+  color:var(--muted);
+  max-width:55ch;
+}
+
+.hero-cta a {
+  display:inline-block;
+  margin-right:10px;
+  margin-top:14px;
+  padding:12px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(47,47,47,.4);
+  text-decoration:none;
+  color:var(--text);
+  font-weight:700;
+}
+
+.hero-cta a.primary {
+  border-color:var(--gold);
+  color:var(--gold);
+}
+
+/* HERO IMAGE — SAFE & CONTAINED */
+.hero-image {
+  max-height:520px;
+  overflow:hidden;
+}
+
+.hero-image img {
+  height:100%;
+  object-fit:cover;
+}
+
+/* ---------------- SECTIONS ---------------- */
+
+section {
+  margin-top:32px;
+  background:rgba(17,23,35,.55);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:var(--shadow);
+}
+
+.section-image {
+  max-height:360px;
+  overflow:hidden;
+  margin-bottom:16px;
+}
+
+.section-image img {
+  height:100%;
+  object-fit:cover;
+  border-radius:14px;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width:900px) {
+  .hero {
+    grid-template-columns:1fr;
   }
-    .hero-image-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;      /* 🔥 THIS IS THE KEY */
-      object-position: center;
-      display: block;
+
+  .hero-image {
+    max-height:380px;
   }
-  </style>
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <div class="mark" aria-hidden="true"><span>☠</span></div>
-        <div>
-          <div style="font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.14em;text-transform:uppercase;">
-            Gadget Rum Club
-          </div>
-          <div style="font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;">
-            Social Media Management
-          </div>
-        </div>
-      </div>
+<div class="wrap">
 
-      <nav class="navcta">
-        <a class="btn" href="#services">What We Do</a>
-        <a class="btn" href="#how">How It Works</a>
-        <a class="btn btn-primary" href="#contact"><strong>Book a Call</strong></a>
-      </nav>
-    </header>
+<header>
+  <div><strong>Gadget Rum Club</strong><br>Social Media Management</div>
+  <nav>
+    <a href="#what">What We Do</a>
+    <a href="#how">How It Works</a>
+    <a href="#contact" class="primary">Book a Call</a>
+  </nav>
+</header>
 
-    <!-- HERO -->
-    <section class="hero card" id="top">
-      <div class="hero-copy">
-        <div class="kicker">Pirate-grade socials • controlled chaos</div>
-        <h1>Social media for brands that don’t want to be boring.</h1>
-        <p class="sub">
-          <b>You run the business.</b> We run the socials.
-          Consistent, sharp content that actually sounds like <i>you</i>—not some corporate copy machine.
-        </p>
+<!-- ================= HERO ================= -->
 
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="#contact"><strong>Book a Call</strong></a>
-          <a class="btn btn-danger" href="#contact">DM / Email Us</a>
-          <a class="btn" href="#why">Why GRC</a>
-        </div>
-
-        <div class="bullets" aria-label="Quick value props">
-          <div class="pill"><b>✅</b> Strategy + posting handled</div>
-          <div class="pill"><b>✅</b> Voice that fits your brand</div>
-          <div class="pill"><b>✅</b> Clean visuals, consistent vibe</div>
-          <div class="pill"><b>✅</b> No fake “influencer” cringe</div>
-        </div>
-      </div>
-
-      <!-- IMAGE PLACEHOLDER 1 -->
-<div class="hero-image-wrap">
-      <img 
-        src="images/grc-hero-01.png.png"
-        alt="Gadget Rum Club cyber pirate hero image"
-        style="width:100%; height:auto; display:block; border-radius:18px;>
-      </div>
-    </section>
-
-    <div class="grid">
-      <!-- SERVICES -->
-      <section class="card section" id="services">
-        <div class="h2">
-          <h2>What We Do</h2>
-          <div class="tag">Built in <b>#002147</b> + <b>#d4af37</b></div>
-        </div>
-
-        <!-- IMAGE PLACEHOLDER 2 -->
-        <div class="placeholder" style="min-height:220px;border-radius:16px;margin-bottom:14px;">
-          <div class="placeholder-inner">
-            <div class="ph-num">2</div>
-            <p class="ph-title">Pirate crew / control panel image</p>
-            <p class="ph-desc">“We handle the ship” visual. Tech + pirate aesthetic.</p>
-          </div>
-        </div>
-
-        <ul class="list">
-          <li><span class="dot"></span><div><b>Social media management</b><div class="muted">Posting, scheduling, and keeping your feeds alive.</div></div></li>
-          <li><span class="dot"></span><div><b>Content creation</b><div class="muted">Short-form copy + visuals that match your vibe.</div></div></li>
-          <li><span class="dot"></span><div><b>Brand voice</b><div class="muted">Sound like a human. Not a brochure.</div></div></li>
-          <li><span class="dot"></span><div><b>Engagement</b><div class="muted">Comments, DMs, and community—handled.</div></div></li>
-          <li><span class="dot"></span><div><b>Simple strategy</b><div class="muted">Clear plan. No buzzword diarrhea.</div></div></li>
-        </ul>
-
-        <div class="callout">
-          <strong>If it lives on social media, we handle it.</strong>
-          <div class="mini">You approve the vibe. We do the work.</div>
-        </div>
-      </section>
-
-      <!-- WHY -->
-      <section class="card section" id="why">
-        <div class="h2">
-          <h2>Why Gadget Rum Club</h2>
-          <div class="tag">Not corporate. Not generic. <b>Not boring.</b></div>
-        </div>
-
-        <!-- IMAGE PLACEHOLDER 3 -->
-        <div class="placeholder" style="min-height:220px;border-radius:16px;margin-bottom:14px;">
-          <div class="placeholder-inner">
-            <div class="ph-num">3</div>
-            <p class="ph-title">Pirate flag / logo moment</p>
-            <p class="ph-desc">A clean brand stamp. Flag + gold accents + dark grit.</p>
-          </div>
-        </div>
-
-        <ul class="list">
-          <li><span class="dot" style="background:var(--red); box-shadow:0 0 0 6px rgba(155,17,30,.12)"></span>
-            <div><b>Real voice</b><div class="muted">We don’t write like LinkedIn robots.</div></div>
-          </li>
-          <li><span class="dot" style="background:var(--rum); box-shadow:0 0 0 6px rgba(108,79,61,.12)"></span>
-            <div><b>Clean visuals</b><div class="muted">Consistent look, no random chaos.</div></div>
-          </li>
-          <li><span class="dot" style="background:var(--gold)"></span>
-            <div><b>Controlled chaos</b><div class="muted">Fun, sharp, and built to convert.</div></div>
-          </li>
-          <li><span class="dot" style="background:var(--navy); box-shadow:0 0 0 6px rgba(0,33,71,.12)"></span>
-            <div><b>Done-for-you</b><div class="muted">You stop stressing. We ship content.</div></div>
-          </li>
-        </ul>
-
-        <div class="cta-band">
-          <h3>Want your socials handled like a ship with a captain?</h3>
-          <a class="btn btn-primary" href="#contact"><strong>Book a Call</strong></a>
-        </div>
-      </section>
+<div class="hero">
+  <div class="hero-copy">
+    <h1>Social media for brands that don’t want to be boring.</h1>
+    <p>
+      <strong>You run the business.</strong> We run the socials.
+      Consistent, sharp content that actually sounds like you.
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="primary">Book a Call</a>
+      <a href="#contact">DM / Email Us</a>
     </div>
-
-    <div class="grid">
-      <!-- WHO IT'S FOR -->
-      <section class="card section" id="for">
-        <div class="h2">
-          <h2>Who It’s For</h2>
-          <div class="tag">Best for: <b>small businesses</b> + <b>creators</b></div>
-        </div>
-
-        <!-- IMAGE PLACEHOLDER 4 -->
-        <div class="placeholder" style="min-height:220px;border-radius:16px;margin-bottom:14px;">
-          <div class="placeholder-inner">
-            <div class="ph-num">4</div>
-            <p class="ph-title">Mixed crew / “we work with you” image</p>
-            <p class="ph-desc">Different business types as a pirate crew. Fun but clear.</p>
-          </div>
-        </div>
-
-        <ul class="list">
-          <li><span class="dot"></span><div><b>Small businesses</b><div class="muted">You need presence, not extra work.</div></div></li>
-          <li><span class="dot"></span><div><b>Service providers</b><div class="muted">Look legit without sounding stiff.</div></div></li>
-          <li><span class="dot"></span><div><b>Creators</b><div class="muted">Content that matches your actual personality.</div></div></li>
-          <li><span class="dot"></span><div><b>People who hate social media</b><div class="muted">Perfect. We’ll do it for you.</div></div></li>
-        </ul>
-      </section>
-
-      <!-- HOW IT WORKS -->
-      <section class="card section" id="how">
-        <div class="h2">
-          <h2>How It Works</h2>
-          <div class="tag">Simple. Fast. <b>Repeatable.</b></div>
-        </div>
-
-        <!-- IMAGE PLACEHOLDER 5 -->
-        <div class="placeholder" style="min-height:220px;border-radius:16px;margin-bottom:14px;">
-          <div class="placeholder-inner">
-            <div class="ph-num">5</div>
-            <p class="ph-title">Map / treasure / workflow image</p>
-            <p class="ph-desc">A “here’s the process” visual. Map lines, icons, steps.</p>
-          </div>
-        </div>
-
-        <ol class="steps">
-          <li class="step">
-            <div class="num">1</div>
-            <div><b>Quick intro</b><div class="muted">15–20 minutes. We learn your vibe + goals.</div></div>
-          </li>
-          <li class="step">
-            <div class="num">2</div>
-            <div><b>We build the plan</b><div class="muted">Content direction, cadence, and style.</div></div>
-          </li>
-          <li class="step">
-            <div class="num">3</div>
-            <div><b>We ship posts</b><div class="muted">You approve. We schedule. Consistency begins.</div></div>
-          </li>
-          <li class="step">
-            <div class="num">4</div>
-            <div><b>We improve</b><div class="muted">We adjust based on what hits.</div></div>
-          </li>
-        </ol>
-
-        <div class="callout" style="border-color: rgba(212,175,55,.28);">
-          <strong>You approve the vibe. We do the work.</strong>
-          <div class="mini">Minimal back-and-forth. Maximum momentum.</div>
-        </div>
-      </section>
-    </div>
-
-    <!-- PRICING / PACKAGES (optional short) -->
-    <section class="card section" id="packages" style="margin-top:18px;">
-      <div class="h2">
-        <h2>Packages</h2>
-        <div class="tag">No one-size-fits-all. <b>Pick your level.</b></div>
-      </div>
-
-      <div class="grid" style="grid-template-columns:1fr 1fr 1fr;">
-        <div class="card section" style="padding:16px; background: rgba(17,23,35,.45);">
-          <div class="kicker" style="margin-bottom:10px;">Starter</div>
-          <div style="font-weight:900;font-size:18px;margin-bottom:6px;">Keep it alive</div>
-          <div class="muted">Perfect if you’ve been ghosting your own feed.</div>
-          <div class="mini">Posting • basic visuals • consistency</div>
-        </div>
-
-        <div class="card section" style="padding:16px; background: rgba(17,23,35,.45); border-color: rgba(212,175,55,.25);">
-          <div class="kicker" style="margin-bottom:10px; border-color: rgba(212,175,55,.45);">Standard</div>
-          <div style="font-weight:900;font-size:18px;margin-bottom:6px;">Build the brand</div>
-          <div class="muted">Solid cadence + better creative direction.</div>
-          <div class="mini">Strategy • content • scheduling • engagement</div>
-        </div>
-
-        <div class="card section" style="padding:16px; background: rgba(17,23,35,.45); border-color: rgba(155,17,30,.25);">
-          <div class="kicker" style="margin-bottom:10px; border-color: rgba(155,17,30,.45); color:#ffd9dd;">Captain</div>
-          <div style="font-weight:900;font-size:18px;margin-bottom:6px;">Full send</div>
-          <div class="muted">Aggressive growth + tight brand control.</div>
-          <div class="mini">Everything above • higher volume • campaigns</div>
-        </div>
-      </div>
-
-      <!-- IMAGE PLACEHOLDER 6 -->
-      <div class="placeholder" style="min-height:220px;border-radius:16px;margin-top:14px;">
-        <div class="placeholder-inner">
-          <div class="ph-num">6</div>
-          <p class="ph-title">Packages / tiers image</p>
-          <p class="ph-desc">Three crates / three ranks / treasure tiers.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT / CTA -->
-    <section class="card section" id="contact" style="margin-top:18px;">
-      <div class="h2">
-        <h2>Ready to hand off the socials?</h2>
-        <div class="tag">Fast reply. <b>No pressure.</b></div>
-      </div>
-
-      <div class="grid" style="grid-template-columns: 1.1fr .9fr;">
-        <div>
-          <p class="muted" style="margin-top:0">
-            If you’ve been meaning to “get consistent” for six months, this is your sign.
-            Hit us up and we’ll get your ship moving.
-          </p>
-
-          <div class="cta-band" style="margin-top:10px;">
-            <div>
-              <h3 style="margin:0 0 4px;">Book a call or send a message.</h3>
-              <div class="mini">Swap these links for your real contact points.</div>
-            </div>
-            <div style="display:flex;gap:10px;flex-wrap:wrap;">
-              <a class="btn btn-primary" href="https://calendly.com/" target="_blank" rel="noreferrer"><strong>Book a Call</strong></a>
-              <a class="btn btn-danger" href="mailto:hello@gadgetrumclub.com">Email Us</a>
-              <a class="btn" href="#" target="_blank" rel="noreferrer">DM on Facebook</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- IMAGE PLACEHOLDER 7 -->
-        <div class="placeholder" style="min-height:240px;border-radius:16px;">
-          <div class="placeholder-inner">
-            <div class="ph-num">7</div>
-            <p class="ph-title">Final CTA image</p>
-            <p class="ph-desc">Pirate captain pointing at a “Book Now” sign / neon call-to-action.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Extra placeholders for later (8–10) -->
-      <div class="grid" style="margin-top:14px;">
-        <div class="placeholder" style="min-height:200px;border-radius:16px;">
-          <div class="placeholder-inner">
-            <div class="ph-num">8</div>
-            <p class="ph-title">Testimonial / proof image</p>
-            <p class="ph-desc">Scroll / stamp / “proved in battle” vibe (even if text-only for now).</p>
-          </div>
-        </div>
-        <div class="placeholder" style="min-height:200px;border-radius:16px;">
-          <div class="placeholder-inner">
-            <div class="ph-num">9</div>
-            <p class="ph-title">Platform icons image</p>
-            <p class="ph-desc">Facebook / Instagram / TikTok as pirate sigils.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="placeholder" style="min-height:200px;border-radius:16px;margin-top:14px;">
-        <div class="placeholder-inner">
-          <div class="ph-num">10</div>
-          <p class="ph-title">Background texture / pattern</p>
-          <p class="ph-desc">Rope, map, sea-spray, rivets, subtle skull pattern in #2f2f2f.</p>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="fine">
-        <div style="font-weight:900;color:#f1f5ff;letter-spacing:.06em;text-transform:uppercase;">Gadget Rum Club</div>
-        <div>Social Media Management • <span style="color:var(--gold);">#d4af37</span> • <span style="color:#ffd9dd;">#9b111e</span> • <span style="color:#b9c7e6;">#002147</span></div>
-        <div class="fine">© <span id="year"></span> Gadget Rum Club. All rights reserved.</div>
-      </div>
-
-      <div class="footer-links">
-        <a href="#top">Top</a>
-        <a href="#services">Services</a>
-        <a href="#how">How it works</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </footer>
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <div class="hero-image">
+    <!-- IMAGE 1 -->
+    <img src="images/grc-hero-01.png"
+         alt="Gadget Rum Club cyber pirate hero image">
+  </div>
+</div>
+
+<!-- ================= WHAT WE DO ================= -->
+
+<section id="what">
+  <div class="section-image">
+    <!-- IMAGE 2 -->
+    <img src="images/grc-whatwedo-02.png"
+         alt="Pirate crew control panel image">
+  </div>
+
+  <h2>What We Do</h2>
+  <p>Social media management, content creation, and brand voice — handled.</p>
+</section>
+
+<!-- ================= WHY GRC ================= -->
+
+<section id="why">
+  <div class="section-image">
+    <!-- IMAGE 3 -->
+    <img src="images/grc-flag-03.png"
+         alt="Gadget Rum Club pirate flag image">
+  </div>
+
+  <h2>Why Gadget Rum Club</h2>
+  <p>Not corporate. Not generic. Not boring.</p>
+</section>
+
+<!-- ================= WHO IT’S FOR ================= -->
+
+<section>
+  <div class="section-image">
+    <!-- IMAGE 4 -->
+    <img src="images/grc-crew-04.png"
+         alt="Who Gadget Rum Club is for">
+  </div>
+
+  <h2>Who It’s For</h2>
+  <p>Small businesses, creators, and anyone who hates managing socials.</p>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section id="how">
+  <div class="section-image">
+    <!-- IMAGE 5 -->
+    <img src="images/grc-map-05.png"
+         alt="How it works pirate map">
+  </div>
+
+  <h2>How It Works</h2>
+  <p>Intro → Plan → Content → Consistency.</p>
+</section>
+
+<!-- ================= PACKAGES ================= -->
+
+<section>
+  <div class="section-image">
+    <!-- IMAGE 6 -->
+    <img src="images/grc-packages-06.png"
+         alt="Gadget Rum Club packages">
+  </div>
+
+  <h2>Packages</h2>
+  <p>Starter. Standard. Captain.</p>
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+  <div class="section-image">
+    <!-- IMAGE 7 -->
+    <img src="images/grc-cta-07.png"
+         alt="Book a call pirate CTA">
+  </div>
+
+  <h2>Ready to hand off the socials?</h2>
+  <p>Email or book a call — fast, no pressure.</p>
+</section>
+
+</div>
 </body>
 </html>
