@@ -2,11 +2,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
-    
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gadget Rum Club — Social Media Management</title>
@@ -171,7 +170,32 @@ h1, h2, h3,
   font-family: 'Pirata One', serif;
   letter-spacing: 0.05em;
 }
-  
+
+/* TOP BANNER */
+.top-banner {
+  margin-top: 12px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(0,33,71,.9), rgba(155,17,30,.9));
+}
+
+.top-banner img {
+  width: 100%;
+  height: 180px;   /* adjust height here */
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .top-banner img {
+    height: 140px;
+  }
+}
+.nav-links a:hover {
+  background: rgba(255,255,255,.12);
+  transform: translateY(-1px);
+  transition: all .2s ease;
+}
 </style>
 <script type="text/javascript" nonce="d301b0b7e297499e9cd4d3057c8" src="//injections.adguard.org?ts=1765918851391&amp;type=content-script&amp;dmn=gadgetrumclub.com&amp;url=http%3A%2F%2Fgadgetrumclub.com%2F&amp;app=msedge.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="d301b0b7e297499e9cd4d3057c8" src="//injections.adguard.org?ts=1765918851391&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script></head>
 
@@ -185,13 +209,26 @@ h1, h2, h3,
     GADGET RUM CLUB
   </div>
 
+   
   <div class="nav-links">
-    <a href="#services">Services</a>
-    <a href="#how">How It Works</a>
-    <a href="#packages">Packages</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <a href="#services">Services</a>
+  <a href="#why">Why GRC</a>
+  <a href="#who">Who It’s For</a>
+  <a href="#how">How It Works</a>
+  <a href="#packages">Packages</a>
+  <a href="#contact" style="  background: linear-gradient(135deg, var(--navy), var(--red));  font-weight: 700;">Get Started</a>
+</div>
+  
+  
 </nav>
+
+
+<!-- TOP BANNER -->
+<section class="top-banner">
+  <img src="images/grc-banner-01.jpg" alt="Gadget Rum Club banner">
+</section>
+
+
 
 <!-- HERO -->
 <section class="section hero card" id="top">
@@ -201,28 +238,28 @@ h1, h2, h3,
     <div>
       <h1>Social media for brands that don’t want to be boring.</h1>
 
-      <p>
-        <strong>You run the business. We run the socials.</strong><br>
-        Consistent, sharp content that actually sounds like you —
-        not a corporate copy machine.
-      </p>
+	<p>
+	  <strong>You run the business. We run the socials.</strong> 🚀<br>
+	  Sharp, consistent content that actually sounds like <em>you</em> —
+	  not a lifeless corporate copy machine.
+	</p>
 
       <ul style="margin:16px 0 0;padding-left:18px;color:var(--muted);line-height:1.7;">
-        <li>Strategy + posting handled</li>
-        <li>Clean visuals, consistent vibe</li>
-        <li>A real voice (no LinkedIn robots)</li>
-        <li>No influencer cringe</li>
-      </ul>
+		  <li>📆 Strategy + posting handled</li>
+		  <li>🎨 Clean visuals, consistent vibe</li>
+		  <li>🗣️ A real voice</li>
+		  <li>🚫 Zero influencer cringe</li>
+	  </ul>
 
-      <div class="cta-row">
-        <a class="button" href="#contact">Book a Call</a>
-        <a class="button" href="mailto:hello@gadgetrumclub.com">DM / Email Us</a>
-      </div>
+		 <div class="cta-row">
+		  <a class="button" href="#contact">Book a Call ⚓</a>
+		  <a class="button" href="mailto:dan@gadgetrumclub.com">DM / Email Us ✉️</a>
+		</div>
     </div>
 
     <!-- IMAGE -->
     <div class="hero-image">
-      <img src="images/grc-hero-01.jpg.png" alt="Gadget Rum Club social media management">
+      <img src="images/grc-door-01.jpg" alt="Gadget Rum Club social media management">
     </div>
 
   </div>
@@ -232,39 +269,45 @@ h1, h2, h3,
 <section class="section card" id="services">
   <h2>What We Actually Do</h2>
 
-  <p style="max-width:680px;">
-    We take social media off your plate — without turning your brand
-    into beige noise.
-  </p>
+ <p style="max-width:680px;">
+  We take social media off your plate — without turning your brand
+  into beige noise. 🥱<br>
+  Clear strategy. Clean execution. Zero nonsense.
+</p>
 
   <div class="grid-2" style="margin-top:18px;">
 
     <!-- IMAGE -->
     <div class="image-block">
-      <img src="images/grc-whatwedo-01.png" alt="Social media content planning and execution">
+      <img src="images/grc-table-01.jpg" alt="Social media content planning and execution">
     </div>
 
     <!-- COPY -->
-    <div>
-      <p><strong>Social media management</strong><br>
-      We plan, write, schedule, and keep your feeds alive.</p>
+<div>
+  <strong>Social media management</strong><br>
+  We plan, write, schedule, and keep your feeds alive — consistently.</p>
 
-      <p><strong>Content creation</strong><br>
-      Captions + visuals that match your personality.</p>
+  <p><strong>Content creation</strong><br>
+  Captions and visuals that actually match your personality, not a template.</p>
 
-      <p><strong>Brand voice</strong><br>
-      You sound like a human. On purpose.</p>
+  <p><strong>Brand voice</strong><br>
+  You sound like a human. A confident one. On purpose. 🗣️</p>
 
-      <p><strong>Engagement</strong><br>
-      Comments and DMs don’t get ignored.</p>
+  <p><strong>Engagement</strong><br>
+  Comments and DMs don’t sit there collecting dust.</p>
 
-      <p><strong>Simple strategy</strong><br>
-      Clear direction. No buzzword diarrhea.</p>
+  <p><strong>Simple strategy</strong><br>
+  Clear direction, real goals — no buzzword diarrhea.</p>
 
-      <p style="margin-top:16px;font-weight:700;">
-        If it lives on social media, we handle it.
-      </p>
-    </div>
+  <p style="margin-top:16px;font-weight:700;">
+    If it lives on social media, we handle it. ⚓
+  </p>
+
+  <div class="cta-row" style="margin-top:12px;">
+    <a class="button" href="#packages">See Packages</a>
+    <a class="button" href="#contact">Talk It Through</a>
+  </div>
+</div>
 
   </div>
 </section>
@@ -274,36 +317,41 @@ h1, h2, h3,
 <section class="section card" id="why">
   <h2>Why Gadget Rum Club</h2>
 
-  <p style="max-width:680px;">
-    There are cheaper options.<br>
-    There are “bigger” agencies.<br>
-    Most of them are boring as hell.
-  </p>
+<p style="max-width:680px;">
+  There are cheaper options.<br>
+  There are bigger agencies.<br>
+  Most of them will drain the personality right out of your brand. 🪦
+</p>
 
   <div class="grid-2" style="margin-top:18px;">
 
     <!-- COPY -->
     <div>
-      <p><strong>Real voice</strong><br>
-      We don’t write like a press release.</p>
+  <p><strong>Real voice</strong><br>
+  We don’t write like a press release. We write like a human who knows what they’re doing.</p>
 
-      <p><strong>Clean visuals</strong><br>
-      Consistent look, not random chaos.</p>
+  <p><strong>Clean visuals</strong><br>
+  A consistent look that actually feels intentional — not random chaos.</p>
 
-      <p><strong>Controlled chaos</strong><br>
-      Fun, sharp, and built to convert.</p>
+  <p><strong>Controlled chaos</strong><br>
+  Fun, sharp, and built to convert — not “look busy.”</p>
 
-      <p><strong>Done-for-you</strong><br>
-      You stop stressing. We ship content.</p>
+  <p><strong>Done-for-you</strong><br>
+  You stop stressing about posts. We ship content on schedule.</p>
 
-      <p style="margin-top:16px;font-weight:700;">
-        Your socials should feel alive — not “managed.”
-      </p>
-    </div>
+  <p style="margin-top:16px;font-weight:700;">
+    Your socials should feel alive — not “managed.” ⚓
+  </p>
+
+  <div class="cta-row" style="margin-top:12px;">
+    <a class="button" href="#packages">See How We Do It</a>
+    <a class="button" href="#contact">Work With Us</a>
+  </div>
+</div>
 
     <!-- IMAGE -->
     <div class="image-block">
-      <img src="images/grc-why-01.jpg" alt="Bold, non-corporate brand identity">
+      <img src="images/grc-ship-01.jpg" alt="Bold, non-corporate brand identity">
     </div>
 
   </div>
@@ -313,33 +361,41 @@ h1, h2, h3,
 <section class="section card" id="who">
   <h2>Who It’s For</h2>
 
-  <p style="max-width:680px;">
-    If any of this sounds familiar, you’re in the right place.
-  </p>
+ <p style="max-width:680px;">
+  This isn’t for everyone — and that’s intentional.<br>
+  If any of this sounds familiar, you’re in the right place.
+</p>
 
   <div class="grid-2" style="margin-top:18px;">
 
     <!-- IMAGE -->
     <div class="image-block">
-      <img src="images/grc-crew-01.png" alt="Brands and creators who hate managing social media">
+      <img src="images/grc-whofor-01.jpg" alt="Brands and creators who hate managing social media">
     </div>
 
     <!-- COPY -->
-    <div>
-      <p><strong>Small businesses</strong><br>
-      You need presence, not another task.</p>
+ <div>
+  <p><strong>Small businesses</strong><br>
+  You need visibility without adding another damn task to your day.</p>
 
-      <p><strong>Service providers</strong><br>
-      Look legit without sounding stiff.</p>
+  <p><strong>Service providers</strong><br>
+  You want to look legit without sounding stiff or salesy.</p>
 
-      <p><strong>Creators</strong><br>
-      Content that matches your actual personality.</p>
+  <p><strong>Creators & founders</strong><br>
+  Your personality is the brand — we help it show up consistently.</p>
 
-      <p><strong>People who hate social media</strong><br>
-      Perfect. We’ll do it for you.</p>
-    </div>
+  <p><strong>People who hate social media</strong><br>
+  Honestly? Perfect. We’ll handle it for you. 😌</p>
 
+  <p style="margin-top:16px;font-weight:700;">
+    If you want your socials handled without babysitting — we should talk.
+  </p>
+
+  <div class="cta-row" style="margin-top:12px;">
+    <a class="button" href="#contact">See If We’re a Fit</a>
+    <a class="button" href="#packages">View Packages</a>
   </div>
+</div>
 </section>
 
 <!-- HOW IT WORKS -->
@@ -347,35 +403,40 @@ h1, h2, h3,
   <h2>How It Works</h2>
 
   <p style="max-width:680px;">
-    No long onboarding. No endless meetings.<br>
-    Just a simple, repeatable system.
-  </p>
+  No long onboarding. No endless meetings. 🙄<br>
+  Just a simple, repeatable system that works.
+</p>
 
   <div class="grid-2" style="margin-top:18px;">
 
     <!-- IMAGE -->
     <div class="image-block">
-      <img src="images/grc-map-01.png" alt="Simple social media workflow">
+      <img src="images/grc-map-01.jpg" alt="Simple social media workflow">
     </div>
 
     <!-- STEPS -->
     <div>
-      <p><strong>Chart a course</strong><br>
-      15–20 minutes. We learn your vibe and goals.</p>
+  <p><strong>Chart a course</strong><br>
+  A quick 15–20 minute call to lock in your vibe, goals, and boundaries.</p>
 
-      <p><strong>Craft a strategy</strong><br>
-      Content direction, cadence, and tone.</p>
+  <p><strong>Craft a strategy</strong><br>
+  We define content direction, cadence, and tone — clearly and simply.</p>
 
-      <p><strong>Execute posts</strong><br>
-      You approve. We schedule. Consistency starts.</p>
+  <p><strong>Execute posts</strong><br>
+  You approve what matters. We handle scheduling and consistency.</p>
 
-      <p><strong>Optimize and grow</strong><br>
-      We adjust based on what actually works.</p>
+  <p><strong>Optimize and grow</strong><br>
+  We adjust based on what actually performs — not guesses.</p>
 
-      <p style="margin-top:16px;font-weight:700;">
-        You approve the vibe. We do the work.
-      </p>
-    </div>
+  <p style="margin-top:16px;font-weight:700;">
+    You approve the vibe. We do the work. ⚙️
+  </p>
+
+  <div class="cta-row" style="margin-top:12px;">
+    <a class="button" href="#contact">Start the Process</a>
+    <a class="button" href="#packages">Pick a Package</a>
+  </div>
+</div>
 
   </div>
 </section>
@@ -384,68 +445,108 @@ h1, h2, h3,
 <section class="section card" id="packages">
   <h2>Packages</h2>
 
-  <p style="max-width:680px;">
-    No one-size-fits-all. Pick your level.
-  </p>
+ <p style="max-width:680px;">
+  No one-size-fits-all nonsense.<br>
+  Pick the level of support that matches how much you want to think about social media.
+</p>
 
   <div class="grid-3" style="margin-top:18px;">
 
     <!-- STARTER -->
     <div>
       <div class="image-block">
-        <img src="images/grc-starter-01.png" alt="Starter social media package">
+        <img src="images/grc-planstarter-01.png" alt="Starter social media package">
       </div>
       <h3>Starter — Keep It Alive</h3>
-      <p>Perfect if you’ve been ghosting your own feed.</p>
-      <p><strong>Includes</strong><br>
-      Posting • basic visuals • consistency</p>
-      <p style="font-weight:700;">Stop the bleeding. Stay visible.</p>
+		 <p>
+		  Perfect if your feed’s been collecting dust and guilt.
+		</p>
+
+		<p><strong>Includes</strong><br>
+		Posting • basic visuals • consistency</p>
+
+		<p>
+		  We keep you visible, on-brand, and active — without overthinking it.
+		</p>
+
+		<p style="font-weight:700;">
+		  Stop the bleeding. Stay present. ⚓
+		</p>
     </div>
 
     <!-- STANDARD -->
     <div>
       <div class="image-block">
-        <img src="images/grc-standard-01.png" alt="Standard social media package">
+        <img src="images/grc-planstandard-01.jpg" alt="Standard social media package">
       </div>
       <h3>Standard — Build the Brand</h3>
-      <p>Solid cadence with stronger creative direction.</p>
-      <p><strong>Includes</strong><br>
-      Strategy • content • scheduling • engagement</p>
-      <p style="font-weight:700;">Look legit. Grow steadily.</p>
+		<p>
+		  A strong, reliable cadence with intentional creative direction.
+		</p>
+
+		<p><strong>Includes</strong><br>
+		Strategy • content creation • scheduling • engagement</p>
+
+		<p>
+		  This is where your brand voice locks in and starts compounding.
+		</p>
+
+		<p style="font-weight:700;">
+		  Look legit. Grow steadily. 📈
+		</p>
     </div>
 
     <!-- CAPTAIN -->
     <div>
       <div class="image-block">
-        <img src="images/grc-captain-01.png" alt="Captain social media package">
+        <img src="images/grc-plancaptain-01.png" alt="Captain social media package">
       </div>
       <h3>Captain — Full Send</h3>
-      <p>Aggressive growth with tight brand control.</p>
-      <p><strong>Includes</strong><br>
-      Everything above • higher volume • campaigns</p>
-      <p style="font-weight:700;">You don’t think about socials. They just work.</p>
+		 <p>
+		  For brands that want momentum without micromanaging.
+		</p>
+
+		<p><strong>Includes</strong><br>
+		Everything above • higher volume • campaigns</p>
+
+		<p>
+		  You don’t think about socials anymore. They just… work.
+		</p>
+
+		<p style="font-weight:700;">
+		  Full control. Full execution. 🏴‍☠️
+		</p>
     </div>
 
   </div>
+<div class="cta-row" style="margin-top:32px; justify-content:center;">
+  <a class="button" href="#contact">Help Me Choose</a>
+</div>
 </section>
 <!-- CONTACT -->
 <section class="section card" id="contact">
   <h2>Ready to hand off the socials?</h2>
 
-  <p style="max-width:680px;">
-    If you’ve been meaning to “get consistent” for six months, this is your sign.
-    Let’s get your ship moving.
-  </p>
+		<p style="max-width:680px;">
+		  If you’ve been saying “I’ll get consistent soon” for six months,
+		  this is your sign. 🪧<br>
+		  Let’s take it off your plate and get your ship moving.
+		</p>
 
-  <div class="cta-row" style="margin-top:16px;">
-    <a class="button" href="#contact">Book a Call</a>
-    <a class="button" href="mailto:hello@gadgetrumclub.com">Email Us</a>
-    <a class="button" href="https://facebook.com/gadgetrumclub" target="_blank">DM on Facebook</a>
-  </div>
-
+	 <div class="cta-row" style="margin-top:16px;">
+	  <a class="button" href="#contact">Book a Call ⚓</a>
+	  <a class="button" href="mailto:hello@gadgetrumclub.com">Email Us ✉️</a>
+	  <a class="button" href="https://facebook.com/gadgetrumclub" target="_blank">
+		DM on Facebook 💬
+	  </a>
+	</div>
+<p style="margin-top:18px;font-weight:700;">
+  No pressure. No contracts shoved in your face.<br>
+  Just a conversation to see if this makes sense.
+</p>
   <!-- SUCCESS IMAGE -->
   <div class="image-block" style="margin-top:20px;">
-    <img src="images/grc-setsail-01.jpg" alt="Successful brands using Gadget Rum Club">
+    <img src="images/grc-shipharbor-01.jpg" alt="Successful brands using Gadget Rum Club">
   </div>
 </section>
 <!-- FINAL CTA -->
@@ -454,20 +555,20 @@ h1, h2, h3,
 
     <h2>Ready to set sail?</h2>
 
-    <p style="margin:12px 0 20px;">
-      Let us handle the posting, planning, and pressure —
-      so you can focus on running the business.
-    </p>
+		 <p style="margin:12px 0 20px;">
+		  Let us handle the posting, planning, and pressure —<br>
+		  so you can focus on running the business without babysitting your socials.
+		</p>
 
     <div class="cta-row" style="justify-content:center;">
-      <a class="button" href="#contact">Book a Call</a>
-    </div>
+  <a class="button" href="#contact">Book a Call ⚓</a>
+</div>
 
   </div>
 
   <!-- BOTTOM IMAGE -->
   <div class="image-block" style="margin-top:24px;">
-    <img src="images/grc-setsail-02.jpg" alt="Ready to set sail with Gadget Rum Club">
+    <img src="images/grc-finalcall-02.jpg" alt="Ready to set sail with Gadget Rum Club">
   </div>
 </section>
 
@@ -491,7 +592,3 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 </body>
 </html>
-
-
-
-
